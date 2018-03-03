@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = [
   {
+    mode: 'production',
     entry: __dirname + '/src/jsx/index',
     output: {
       path: path.join(__dirname, '/dist/js'),
@@ -26,7 +27,6 @@ module.exports = [
       contentBase: path.resolve(__dirname, 'dist'),
       port: 3000,
     },
-    devtool: 'cheap-module-eval-sourcemap',
     resolve: {
       extensions: [ '.js', '.jsx' ],
     },
