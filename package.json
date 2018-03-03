@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://mkt-do.github.io/profile",
   "scripts": {
     "build:dev": "webpack --config webpack.config.js --mode development",
     "build:prod": "webpack --config webpack.config.js --mode production",
     "start": "webpack-dev-server --history-api-fallback",
     "eslint": "eslint src/jsx/**/*.jsx",
     "eslint:fix": "eslint --fix src/jsx/**/*.jsx",
+    "deploy": "npm run build:prod && gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -44,6 +46,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "flow-bin": "^0.66.0",
     "flow-webpack-plugin": "^1.2.0",
+    "gh-pages": "^1.1.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
