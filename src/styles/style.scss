@@ -1,4 +1,21 @@
+body {
+  margin: 0px;
+}
+
 h1 {
   color: #FF0000;
 }
+
+#content {
+  margin: 10px;
+}
+
+#appbar {
+  flexGrow: 1;
+}
+
+#headerTitle {
+  flex: 1;
+}
+
 
