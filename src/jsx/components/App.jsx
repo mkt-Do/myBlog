@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from './Home';
+import Top from './Top';
 import Header from './Header';
 import Intro from './Intro';
 
@@ -11,7 +11,7 @@ export default function App() {
       <Header />
       <div id="content">
         <Switch>
-          <Route exact path='/' component={ Home } />
+          <Route exact path='/' component={ Top } />
           <Route path='/intro' component={ Intro } />
         </Switch>
       </div>

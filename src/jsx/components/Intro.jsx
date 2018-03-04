@@ -1,13 +1,14 @@
 import React from 'react';
+import { Grid, Paper } from 'material-ui';
 
 export default function Intro() {
   return (
     <div>
-      <h1>Introduction</h1>
-      <h2>Individual</h2>
-      <ul>
-        <li>Makoto Ishizaki</li>
-      </ul>
+      <Grid container spacing={16}>
+        <Grid item xs={12}>
+          <h1>Introduction</h1>
+        </Grid>
+      </Grid>
     </div>
   );
 }
