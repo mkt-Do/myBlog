@@ -8,6 +8,7 @@ module.exports = [
     entry: __dirname + '/src/jsx/index',
     output: {
       path: path.join(__dirname, '/dist/js'),
+      publicPath: '/dist/static',
       filename: 'bundle.js',
     },
     module: {
@@ -18,6 +19,12 @@ module.exports = [
           exclude: /node_modules/,
           options: {
             presets: [ 'env', 'flow', 'react', 'stage-2' ],
+          },
+        },
+        {
+          test: /\.(jpe?g|png|gif)$/,
+          use: {
+            loader: 'file-loader?name=[name].[ext]',
           },
         },
       ],

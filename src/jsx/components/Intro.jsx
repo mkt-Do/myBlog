@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Paper } from 'material-ui';
+import { Grid, Paper, Avatar } from 'material-ui';
+import pic from '../../images/Pikachu.jpg';
 
 export default function Intro() {
   return (
@@ -7,6 +8,7 @@ export default function Intro() {
       <Grid container spacing={16}>
         <Grid item xs={12}>
           <h1>Introduction</h1>
+          <Avatar alt='mkt-Do' src={pic} />
         </Grid>
       </Grid>
     </div>

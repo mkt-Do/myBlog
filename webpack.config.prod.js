@@ -20,6 +20,12 @@ module.exports = [
             presets: [ 'env', 'flow', 'react', 'stage-2' ],
           },
         },
+        {
+          test: /\.(jpe?g|png|gif)$/,
+          use: {
+            loader: 'file-loader?name=[name].[ext]',
+          },
+        },
       ],
     },
     plugins: [ new FlowWebpackPlugin() ],
