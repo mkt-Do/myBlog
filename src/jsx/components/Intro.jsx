@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Paper, Avatar } from 'material-ui';
+import { Grid, Avatar } from 'material-ui';
 import pic from '../../images/Pikachu.jpg';
 
 export default function Intro() {
