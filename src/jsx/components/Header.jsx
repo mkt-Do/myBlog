@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Tooltip, IconButton, Avatar } from 'material-ui';
-import { Home, PersonPin } from 'material-ui-icons';
+import { Home } from 'material-ui-icons';
 import icon from '../../images/Pikachu.jpg';
 
 export default function Header() {
@@ -17,15 +17,11 @@ export default function Header() {
               <Home />
             </IconButton>
           </Tooltip>
-          <Tooltip title='Intro'>
-            <IconButton aria-label='Intro' component={Link} to='/intro'>
-              <PersonPin />
-            </IconButton>
+          <Tooltip title='Profile'>
+            <Avatar alt='mkt-Do' src={icon} id='headerAvatar' component={Link} to='/profile' />
           </Tooltip>
-          <Avatar alt='mkt-Do' src={icon} id='headerAvatar' />
         </Toolbar>
       </AppBar>
     </div>
   );
 }
-

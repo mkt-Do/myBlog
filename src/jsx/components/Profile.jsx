@@ -7,11 +7,10 @@ export default function Intro() {
     <div>
       <Grid container spacing={16}>
         <Grid item xs={12}>
-          <h1>Introduction</h1>
+          <h1>Profile</h1>
           <Avatar alt='mkt-Do' src={pic} />
         </Grid>
       </Grid>
     </div>
   );
 }
-

@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Top from './Top';
 import Header from './Header';
-import Intro from './Intro';
+import Profile from './Profile';
 
 export default function App() {
   return (
@@ -12,10 +12,9 @@ export default function App() {
       <div id="content">
         <Switch>
           <Route exact path='/' component={ Top } />
-          <Route path='/intro' component={ Intro } />
+          <Route path='/profile' component={ Profile } />
         </Switch>
       </div>
     </div>
   );
 }
-
