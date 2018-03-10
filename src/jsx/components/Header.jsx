@@ -1,27 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, Tooltip, IconButton, Avatar } from 'material-ui';
-import { Home } from 'material-ui-icons';
+import { Avatar } from 'material-ui';
 import icon from '../../images/Pikachu.jpg';
+import { Home, PersonPin } from 'material-ui-icons';
 
 const Header = ({title, changeTitle}) => {
   return (
-    <div>
-      <AppBar position='static' color='inherit' id='appbar'>
-        <Toolbar>
-          <Typography variant='title' color='inherit' id='headerTitle'>
-            {title}
-          </Typography>
-          <Tooltip title='Home'>
-            <IconButton aria-label='Home' component={Link} to='/' onClick={() => changeTitle('Home')}>
+    <div className='header'>
+      <h1 className='title'>{title}</h1>
+      <nav　role='navigation' className='nav'>
+        <ul className='nav-items'>
+          <li className='nav-item'>
+            <Link className='nav-link' to='/'>
               <Home />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title='Profile'>
-            <Avatar alt='mkt-Do' src={icon} id='headerAvatar' component={Link} to='/profile' onClick={() => changeTitle('Profile')} />
-          </Tooltip>
-        </Toolbar>
-      </AppBar>
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link className='nav-link' to='/profile'>
+              <PersonPin />
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Avatar src={icon} />
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };

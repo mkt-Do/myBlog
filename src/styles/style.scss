@@ -1,26 +1,47 @@
-body {
-  margin: 0px;
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  border-bottom: solid thin #E0E0E0;
 }
 
-h1 {
-  color: #FF0000;
-}
-
-#content {
-  margin: 10px;
-}
-
-#appbar {
-  flexGrow: 1;
-}
-
-#headerTitle {
+.header .title {
   flex: 1;
+  margin-bottom: 0px;
+  bottom: 0;
 }
 
-#headerAvatar {
-  margin: 10px;
-  height: 30px;
-  width: 30px;
+.nav {
+  margin: 10px 0 auto;
+  text-align: right;
+  font-family: Georgia, Arial, sans-serif;
+  font-size: 14px;
+  bottom: 0;
 }
 
+.nav-items {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.nav-item:last-child {
+  margin-right: 10px;
+}
+
+.nav-link {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}

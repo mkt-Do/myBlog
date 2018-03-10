@@ -1,28 +1,32 @@
+// action if browser back or forward button clicked or url changed directly
+import { LOCATION_CHANGE } from 'react-router-redux';
+import { matchPath } from 'react-router-dom';
+
 // action
-const CHANGE_TITLE = 'CHANGE_TITLE';
 
 // action creator
-export const changeTitle = (title = 'Home') => {
+export const changeLocation = (pathname) => {
   return {
-    type: CHANGE_TITLE,
+    type: LOCATION_CHANGE,
     payload: {
-      title: title,
+      title: pathname,
     }
   };
 };
 
 // initial state
 const initialState = {
-  title: 'Home',
+  title: 'HOME',
 };
 
 // reducer
 const reducer = (state = initialState, action) => {
   switch(action.type) {
-  case CHANGE_TITLE:
+  case LOCATION_CHANGE:
+    console.log(action.payload.title);
     return {
       title: action.payload.title,
-    };
+    }
   default:
     return state;
   }
