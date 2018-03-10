@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Avatar } from 'material-ui';
 import pic from '../../images/Pikachu.jpg';
 
-export default function Intro() {
+const Profile = () => {
   return (
     <div>
       <Grid container spacing={16}>
@@ -14,3 +14,5 @@ export default function Intro() {
     </div>
   );
 }
+
+export default Profile;

@@ -2,10 +2,10 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Top from './Top';
-import Header from './Header';
+import Header from '../containers/Header';
 import Profile from './Profile';
 
-export default function App() {
+const App = () => {
   return (
     <div>
       <Header />
@@ -17,4 +17,6 @@ export default function App() {
       </div>
     </div>
   );
-}
+};
+
+export default App;
