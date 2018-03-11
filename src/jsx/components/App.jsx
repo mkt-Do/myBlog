@@ -1,8 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
-import ConnectedSwitch from '../containers/ConnectedSwitch';
-import Header from '../containers/Header';
+import Header from './Header';
 import Top from './Top';
 import Profile from './Profile';
 
@@ -11,10 +10,10 @@ const App = () => {
     <div>
       <Header />
       <div id="content">
-        <ConnectedSwitch>
+        <Switch>
           <Route exact path='/' component={ Top } />
           <Route path='/profile' component={ Profile } />
-        </ConnectedSwitch>
+        </Switch>
       </div>
     </div>
   );

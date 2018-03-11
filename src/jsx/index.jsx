@@ -6,11 +6,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { createBrowserHistory } from 'history';
 
 import App from './components/App';
-import reducer from './modules';
+// import reducer from './modules';
 
 const history = createBrowserHistory();
 const store = createStore(
-  reducer,
+//  reducer,
   applyMiddleware(
     routerMiddleware(history)
   )
