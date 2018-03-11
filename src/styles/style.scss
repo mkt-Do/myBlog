@@ -1,16 +1,33 @@
+body {
+  margin: 0px;
+  font-family: "Lato", "Mplus 1p";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 .header {
   display: flex;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-end;
   flex-wrap: nowrap;
   align-content: stretch;
   border-bottom: solid thin #E0E0E0;
+  box-shadow: 0px 3px 1px -1px #BCBCBC;
+  -moz-box-shadow: 0px 3px 1px -1px #BCBCBC;
+  -webkit-box-shadow: 0px 3px 1px -1px #BCBCBC;
+  background-color: #FFFFFF;
 }
 
 .header .title {
   flex: 1;
   margin-bottom: 0px;
+  margin-left: 10px;
   bottom: 0;
 }
 
@@ -38,10 +55,23 @@
 
 .nav-link {
   display: block;
-  position: relative;
   font-size: 14px;
   letter-spacing: 1px;
   cursor: pointer;
   text-decoration: none;
   outline: none;
+  color: #BCBCBC;
+}
+
+.content {
+  height: auto;
+}
+
+.content-main {
+  text-align: center;
+}
+
+.profile-hero {
+  background-color: #FF0000;
+  height: 80vh;
 }

@@ -1,17 +1,24 @@
 import React from 'react';
-import pic from '../../images/Pikachu.jpg';
+import { Avatar } from 'material-ui';
 
-const Profile = () => {
-  return (
-    <div>
-      <div>
-        <div>
-          <h1>Profile</h1>
-          <img src={pic} />
-        </div>
-      </div>
+import icon from '../../images/Pikachu.jpg';
+
+const styles = {
+  avatar: {
+    display: 'flex',
+    justifyContent: 'center',
+  }
+};
+
+const Profile = () => (
+  <div className='content-main'>
+    <div className='profile-hero'>
     </div>
-  );
-}
+    <h2>Profile</h2>
+    <div style={styles.avatar}>
+      <Avatar alt='mkt-Do' src={icon} />
+    </div>
+  </div>
+);
 
 export default Profile;
