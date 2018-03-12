@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 import { Avatar } from 'material-ui';
 import icon from '../../images/Pikachu.jpg';
 import { Home, PersonPin, Link } from 'material-ui-icons';
@@ -12,17 +13,26 @@ const Header = () => {
         <ul className='nav-items'>
           <li className='nav-item'>
             <NavLink activeStyle={{ color: '#DB4625' }} className='nav-link' exact to='/'>
-              <Home />
+              <p data-tip='Home'>
+                <Home />
+              </p>
+              <ReactTooltip />
             </NavLink>
           </li>
           <li className='nav-item'>
             <NavLink activeStyle={{ color: '#DB4625' }} className='nav-link' to='/profile'>
-              <PersonPin />
+              <p data-tip='Profile'>
+                <PersonPin />
+              </p>
+              <ReactTooltip />
             </NavLink>
           </li>
           <li className='nav-item'>
             <NavLink activeStyle={{ color: '#DB4625' }} className='nav-link' to='/link'>
-              <Link />
+              <p data-tip='Link'>
+                <Link />
+              </p>
+              <ReactTooltip />
             </NavLink>
           </li>
           <li className='nav-item'>
